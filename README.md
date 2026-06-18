@@ -1,23 +1,33 @@
 # Student Stress Prediction System
 
-A Machine Learning based web application that predicts student stress levels based on academic, personal, and lifestyle factors.
+A Machine Learning based web application that predicts student stress levels using student lifestyle and academic factors.
 
-## Features
+## Project Structure
 
-* Predicts stress level using Machine Learning
-* User-friendly web interface
-* Flask REST API backend
-* Deployed on Render
+### Frontend
+
+https://github.com/marapakaprasanthi276-gif/student-zen-predict
+
+### Backend
+
+https://github.com/marapakaprasanthi276-gif/student-stress-api
 
 ## Technologies Used
 
-* Python
+* React / TypeScript
 * Flask
 * Scikit-learn
 * Random Forest Classifier
-* GitHub
 * Render
-* Lovable AI
+* GitHub
+
+## Features
+
+* Student stress prediction
+* REST API integration
+* Personalized stress analysis
+* Responsive web interface
+
 
 ## Input Features
 
@@ -40,3 +50,6 @@ A Machine Learning based web application that predicts student stress levels bas
 ## Author
 
 Marapaka Prasanthi
+
+
+
