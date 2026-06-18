@@ -2,22 +2,32 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Example dataset (you can replace with your real dataset)
-data = {
-    "study_hours": [1,2,3,4,5,6,7,8],
-    "sleep_hours": [8,7,6,5,4,3,2,1],
-    "screen_time": [2,3,4,5,6,7,8,9],
-    "stress_level": [0,0,0,1,1,1,1,1]
-}
+# Load dataset
+df = pd.read_csv("student_stress_dataset_1000_rows.csv")
 
-df = pd.DataFrame(data)
+# Features
+X = df[
+    [
+        "Study_Hours",
+        "Sleep_Hours",
+        "Attendance_Percentage",
+        "CGPA",
+        "Social_Media_Hours",
+        "Physical_Activity_Hours",
+        "Family_Pressure",
+        "Financial_Stress",
+        "Exam_Score"
+    ]
+]
 
-X = df[["study_hours", "sleep_hours", "screen_time"]]
-y = df["stress_level"]
+# Target
+y = df["Stress_Level"]
 
-model = RandomForestClassifier()
+# Train model
+model = RandomForestClassifier(random_state=42)
 model.fit(X, y)
 
+# Save model
 joblib.dump(model, "stress_model.pkl")
 
-print("Model created successfully!")
+print("Model trained successfully!")
